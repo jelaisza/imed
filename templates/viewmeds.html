@@ -1,0 +1,124 @@
+<style>
+.laman{
+background-color:#F8F8F8;
+
+}
+
+
+</style>
+
+<ion-view>
+	<ion-content>
+
+<div class="laman">
+<br>
+<div class="container wrapper" ng-controller="DbController">
+
+<div ng-repeat="detail in details">
+
+
+  <div class="container">
+
+  <div class="card" style="margin-top:5px;">
+    <div class="item item-text-wrap" style="font-size:20px;">
+  Medicine Details
+  <hr>
+  <div class="list">
+    <div class="item item-avatar">
+	    <img src="img/pill1.png" style="left:200px;">
+	    <h2  style="font-size:20px;"> {{detail.r_drugname}}</h2>
+
+	    <p style="font-size:17px;">{{detail.r_dosage}} mg</p>
+	    <p style="font-size:17px;">{{detail.r_dosageform}}</p>
+	    <p style="font-size:17px;">Take {{detail.r_food}}</p>
+
+
+
+	  </div>
+</div>
+
+  </div>
+</div>
+
+
+
+
+
+  <div class="card">
+    <div class="item item-text-wrap" style="font-size:20px;">
+  Frequency
+  <hr>
+  <div class="list">
+
+			<p style="font-size:17px;">{{detail.r_schedule}}</p>
+	   <p style="font-size:17px;"> Every {{detail.r_perhour}}</p>
+<p style="font-size:17px;">In {{detail.r_day}}</p>
+
+
+</div>
+
+</div>
+</div>
+
+
+
+  <div class="card">
+    <div class="item item-text-wrap" style="font-size:20px;">
+  Doctor Details
+  <hr>
+  <div class="list">
+
+	    <p style="font-size:17px;">Dr.{{detail.r_doctorname}}</p>
+	    <p style="font-size:17px;">{{detail.r_licenced}}</p>
+	    <p style="font-size:17px;">{{detail.r_contact}}</p>
+
+
+</div>
+
+</div>
+</div>
+
+
+<div class="card">
+  <div class="item item-divider" style="font-size:20px;">
+    Photo
+  </div>
+	<br>
+<center>  <img ng-src="{{detail.r_image}}" style="height:400px; width:320px"></center>
+<br>
+ </div>
+
+</div>
+
+
+
+
+
+<center>
+
+<div class="row">
+<div class="col col-50">
+	<a href="#/app/edit">
+	<button class="button  button-outline button-light"  ng-click="editInfo(detail)" style="border-radius:50px; height:50px;width:150px; color:#2AD17D; border-color: #2AD17D;">
+  EDIT
+
+</button>
+</a>
+</div>
+
+<div class="col col-50">
+
+	<button class="button button-light" ng-click="deleteInfo(detail)" style="border-radius:50px; height:50px; width:150px; color: #fff; background-color:#2AD17D;">
+DELETE
+</button></div>
+</div>
+</center>
+
+
+
+</div>
+</div>
+<br>
+
+</ion-view>
+	</ion-content>

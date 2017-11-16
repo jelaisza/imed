@@ -1,0 +1,66 @@
+<style>
+
+
+.laman{
+background-color:#fff;
+
+}
+
+
+}
+</style>
+
+
+<ion-view>
+	<ion-content><br>
+		<div class="laman">
+		<br>
+		<center><h4>General Setting</h4></center>
+<hr style="width:320px;"></hr>
+
+<br>
+<div class="list">
+<label class="item item-input item-select">
+<div class="input-label">
+Alarm Tone
+<select  name="r_schedule" ng-model="recetaInfo.r_schedule"  required>
+    <option value="1">Calm </option>
+<option value="2">Samsung Tone </option>
+<option value="3">Cherry Mobile Tone</option>
+
+
+
+    </select>
+  </div>
+  </label>
+
+
+  <label class="item item-input item-select">
+   <div class="input-label">
+    Reminder Frequency
+    <select  name="r_perhour" ng-model="recetaInfo.r_perhour"  required>
+        <option value="1"> 5 mins</option>
+    <option value="2">10 mins</option>
+    <option value="3">15 mins </option>
+
+
+
+        </select>
+      </div>
+
+      </label>
+
+       <li class="item item-toggle">
+           Vibration
+           <label class="toggle toggle-balanced">
+               <input type="checkbox">
+               <div class="track">
+                   <div class="handle"></div>
+               </div>
+           </label>
+       </li>
+</div>
+<br>
+
+	</ion-content>
+</ion-view>

@@ -1,0 +1,57 @@
+<style>
+.laman{
+background-color:	#F8F8F8;
+
+}
+
+
+
+</style>
+
+<ion-view>
+	<ion-content>
+<div class="laman">
+<br>
+
+	<div class="card">
+	  <div class="item item-text-wrap" style="color:#2AD17D; font-size:25px;">
+
+				Medication Reminder <i class="icon ion-android-alarm-clock padding" style=" font-size:40px; left:200px;"></i>
+			<hr>
+	  </div>
+	</div>
+
+	<div class="container wrapper" ng-controller="DbController">
+
+<div ng-repeat="detail in details">
+<div class="card">
+  <div class="item item-divider"  >
+    <h2 style="color:#2AD17D;">{{detail.r_time}}</h2>
+  </div>
+	
+  <div class="item item-text-wrap">
+  <div class="item item-avatar">
+		<img src="img/pill1.png" style="left:200px; " >
+		<h2 style="font-size:20px;"> {{detail.r_drugname}}</h2>
+
+		<br>
+		<p style="font-size:18px;">{{detail.r_dosage}} mg/{{detail.r_dosageform}}</p>
+  </div>
+</div>
+  <div class="item item-divider">
+
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<a href="#/app/viewmeds" ng-click="formToggle()" style="color:#101010;">VIEW</a></p>
+
+</div>
+
+</div>
+<br>
+
+
+
+</div>
+</ion-view>

@@ -1,0 +1,242 @@
+<style>
+.laman{
+background-color:#F8F8F8;
+
+}
+.title{
+color:#fff;
+
+}
+</style>
+
+<ion-view view-title="Add Medication">
+	<ion-content ng-controller="DbController">
+<div class="laman">
+	<br>
+				<div >
+
+		<div class="row padding" >
+			<div class="col">
+					 <form name="recetaList" id="recetaForm" ng-submit="insertInfo(recetaInfo);">
+
+
+					<div class="container" style="padding-top:2px;">
+
+					<div class="card" >
+					  <div class="item item-text-wrap" >
+					Medicine Details
+					<hr>
+					<div class="list">
+
+						<label class="item item-input">
+						 <input type="text" name="r_drugname" class="form-control" placeholder="Medicine Name" ng-model="recetaInfo.r_drugname"  required>
+						</label>
+			<label class="item item item-input item-input item-select">
+			 <input type="text" name="r_dosage" class="form-control" placeholder="Dosage strength (mg)" ng-model="recetaInfo.r_dosage" required>
+
+				<div class="input-label">
+
+				 <select  name="r_dosageform" ng-model="recetaInfo.r_dosageform"  required>
+				 <option value="tablet">tablet </option>
+				 <option value="capsule">capsule </option>
+				 <option value="pill">pill </option>
+				 <option value="lozenge">lozenge </option>
+				 <option value="pastilles">pastilles </option>
+				 <option value="granules">granules </option>
+				 <option value="powder">powder </option>
+				 <option value="liquid">liquid </option>
+				 <option value="ointment">ointment </option>
+				 <option value="cream">cream</option>
+
+
+
+
+						 </select>
+					 </div>
+
+
+			</label>
+
+
+
+
+
+
+
+<br>
+
+<div class="form-group">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="" class="radio-inline gender">
+			<input type="radio" name="r_food" value="before meal" ng-model="recetaInfo.r_food">Before Meal
+			</label>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<label for="" class="radio-inline gender">
+			<input type="radio" name="r_food" value="after meal" ng-model="recetaInfo.r_food">After Meal
+		</label>
+	</div>
+
+
+					</div>
+			</div>
+			</div
+
+
+
+
+					<div class="card">
+					  <div class="item item-text-wrap">
+					Frequency
+					<hr>
+
+
+						<label class="item item-input item-select">
+						 <div class="input-label">
+							Set time
+					<select  name="r_time" ng-model="recetaInfo.r_time"  required>
+	<option value="01:00 AM">01:00 AM </option>
+<option value="02:00 AM ">02:00 AM </option>
+<option value="03:00 AM">03:00 AM </option>
+<option value="04:00 AM">04:00 AM </option>
+<option value="05:00 AM">05:00 AM </option>
+	<option value="06:00 AM">06:00 AM </option>
+		<option value="07:00 AM">07:00 AM </option>
+		<option value="08:00 AM">08:00 AM </option>
+		<option value="09:00 AM">09:00 AM </option>
+		<option value="10:00 AM">10:00 AM </option>
+		<option value="11:00 AM">11:00 AM </option>
+		<option value="12:00 PM">12:00 PM </option>
+		<option value="01:00 PM">01:00 PM </option>
+		<option value="02:00 PM">02:00 PM </option>
+		<option value="03:00 PM">03:00 PM </option>
+		<option value="04:00 PM">04:00 PM </option>
+		<option value="05:00 PM">05:00 PM </option>
+		<option value="06:00 PM">06:00 PM </option>
+		<option value="07:00 PM">07:00 PM </option>
+		 <option value=">08:00 PM">08:00 PM </option>
+			<option value="09:00 PM">09:00 PM </option>
+			<option value="10:00 PM">10:00 PM </option>
+			<option value="11:00 PM">11:00 PM </option>
+			 <option value="12:00 AM">12:00 AM </option>
+
+
+	</select>
+								</div>
+								</label>
+
+				<label class="item item-input item-select">
+				 <div class="input-label">
+					Schedule
+					<select  name="r_schedule" ng-model="recetaInfo.r_schedule"  required>
+							<option value="Once a day">Once a day </option>
+					<option value="Twice a day">Twice a day </option>
+					<option value="Thrice a day">Thrice a day </option>
+
+
+
+							</select>
+						</div>
+						</label>
+
+
+
+
+
+
+
+								<label class="item item-input item-select">
+								 <div class="input-label">
+									In
+									<select  name="r_day" ng-model="recetaInfo.r_day"  required>
+											<option value="3 days">3 days</option>
+									<option value="4 days">4 days</option>
+									<option value="5 days">5 days </option>
+									<option value="6 days">6 days</option>
+									<option value="1 week">1 week </option>
+
+
+
+
+											</select>
+										</div>
+										</label>
+
+				</div>
+				</div>
+
+
+					<div class="card">
+
+						<div class="item item-text-wrap">
+					Doctor's Details
+					<hr>
+					<div class="list">
+
+						<label class="item item-input">
+						 <input type="text" name="r_doctorname" class="form-control" placeholder="Doctor's Name" ng-model="recetaInfo.r_doctorname" required>
+						</label>
+
+
+
+						<label class="item item-input">
+						 <input type="text" name="r_licenced" class="form-control" placeholder="Doctor's Licenced #" ng-model="recetaInfo.r_licenced" required>
+						</label>
+
+						<label class="item item-input">
+						 <input type="text" name="r_contact" class="form-control" placeholder="Doctor's Contact #" ng-model="recetaInfo.r_contact" required>
+						</label>
+					</center>
+
+					</div>
+
+						</div>
+											</div>
+<p><br></p>
+
+											<!---camera--->
+
+											<div class="card">
+												<div class="item item-text-wrap">
+													Take a picture
+													<hr>
+												</div>
+												<div class="item item-image">
+													<img id="image" class="item" name="r_image" ng-controller="DbController" ng-src="{{cameraimage}}" style="height: 350px;" ng-click="takePicture()" ng-model="recetaInfo.r_image">
+												</div>
+											</div>
+
+
+<center>
+<div>
+	<button ng-controller="DbController" class="button button-light" ng-click="takePicture()" style="width:300px; border-radius:50px; margin-bottom:20px; color: #fff; background-color:#2AD17D;">
+		Take Photo
+	</button>
+
+
+</center>
+
+		<center>
+				 <button class="button button-light" href="#/app/account" ng-click="insertInfo(recetaInfo); add(); isScheduled()" style="width:300px; border-radius:50px; margin-bottom:20px; color: #fff; background-color:#2AD17D;">
+			 Add Medicine
+			 </button>
+
+		 </center
+
+			</div>
+
+			</div>
+
+
+
+
+			</div>
+			</form>
+			</div>
+			</div>
+
+<br>
+
+	</ion-content>
+</ion-view>

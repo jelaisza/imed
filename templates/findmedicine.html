@@ -1,0 +1,59 @@
+<style>
+
+
+.image{
+
+
+}
+</style>
+
+
+<ion-view>
+	<ion-content>
+
+<div class="container wrapper" ng-controller="DbController">
+	<form name="seachUser" ng-submit="search(username)">
+	    <input type="search" placeholder="Search" ng-model="username"/>
+	    <input type="submit" value="Search"/>
+
+	  <button class="button button-clear">
+	    Cancel
+	  </button>
+
+</form>
+
+<div ng-repeat="detail in details">
+<div>
+    <h2>{{error}}</h2>
+    <p>Username: {{name}}</p>
+
+  </div>
+
+<table id='tableData'>
+	<thead>
+<tr>
+			<th>Name</th>
+			<th>Stars</th>
+			<th>Language</th>
+
+</tr>
+	</thead>
+<tbody>
+
+	<tr ng-repeat="repo in repos | orderBy: '-stargazers_count'">
+			<td>{{repo.name}}</td>
+			<td>{{repo.stargazers_count}}</td>
+			<td>{{repo.language}}</td>
+
+</tr>
+</tbody>
+
+</table>
+
+</div>
+</div>
+
+</div>
+
+	</ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+$scope.insertInfo = function(info){
+
+  var base64=document.getElementbyId('image').src;
+$http.post('http://jeszabada.esy.es/databaseFiles/insertReceta.php',{
+  "r_drugname":info.r_drugname,
+  "r_food":info.r_food,
+  "r_dosage":info.r_dosage,
+  "r_dosageform":info.r_dosageform,
+  "r_time":info.r_time,
+  "r_schedule":info.r_schedule,
+  "r_perhour":info.r_perhour,
+  "r_day":info.r_day,
+  "r_name":info.r_name,
+  "r_doctorname":info.r_doctorname,
+  "r_licenced":info.r_licenced,
+  "r_contact":info.r_contact,
+  "r_image":base64
+}).success(function(data){
+
+if (data == true) {
+getInfo();
+$('#recetaForm')
+}
+});
+}
+
+
+
+  "r_image":base64

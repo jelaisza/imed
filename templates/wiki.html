@@ -1,0 +1,78 @@
+
+<style>
+.title{
+  color:#fff;
+}
+
+
+.p{
+font-color:red;
+
+}
+</style>
+
+  <ion-view view-title="Search">
+  	<ion-content>
+
+  <body ng-app="starter" ng-cloak>
+  <div ng-controller="Controller">
+      		<div>
+      		<br>
+
+            <div class="list list-inset">
+          	  <label class="item item-input">
+          	    <i class="icon ion-search placeholder-icon"></i>
+          	    <input type="text" ng-model="text" name="text" placeholder="{{placeholder}}" style="height:45px;">
+          	  </label>
+          	</div>
+
+        <center>
+              <button class="button  button-outline button-light"  ng-click="submit()" style="border-radius:50px; height:50px; width:350px; color:#2AD17D; border-color: #2AD17D; font-size:17px;">
+            Find
+
+          </button>
+        </center>
+
+
+<br>
+
+
+
+      </div>
+          <div class='md-padding' layout="row" flex>
+        <div flex>
+          <dic class="card" ng-show="showError" flex>
+            {{error}}
+          </div>
+
+
+            <div class="card" ng-repeat="i in [0,1, 2, 3, 4,5,6,7,8,9]" ng-show="showData" class="md-accent" ng-repeat="i in [0,1, 2, 3, 4,5,6,7,8,9]" ng-show="showData" flex>
+              <div class="item item-divider">
+            <h2 style="font-size:20px;"> {{titles[i]}}</h2>
+              </div>
+              <div class="item item-text-wrap">
+            <p style="font-size:17px;">{{des[i]}}</p>
+              </div>
+
+
+              <div class="item item-divider">
+ <br>
+              </div>
+
+            </div>
+<p><br>
+<br>
+<br>
+<br>
+<br></p>
+
+        </div>
+
+
+      </main>
+
+
+  </md-content>
+
+</ion-view>
+</ion-content>

@@ -1,0 +1,67 @@
+<style>
+
+.scroll-bg{
+ background: url("img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    }
+
+    .center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.card{
+  border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	color: white;
+
+}
+</style>
+
+
+
+<ion-view class="scroll-bg">
+  <ion-content>
+
+<a class="button icon-left ion-chevron-left button-clear button-light" href="#/landing" style="color:black;">Back</a>
+
+<img src="img/logo.png" class="center" style="  width:200px; height:auto; ">
+<div class = "row responsive-sm" >
+
+<div class="card">
+  <div class="item item-text-wrap">
+<center>Log in Form</center>
+<hr>
+
+<div class="list">
+
+
+<label class="item item-input item-floating-label">
+  <span class="input-label">Username</span>
+<input type="text" placeholder="Username">
+</label>
+
+
+<label class="item item-input item-floating-label">
+  <span class="input-label">Password</span>
+<input type="password" placeholder="Password">
+</label>
+<center>
+<br>
+  <a class="button button-light button-outline" href="#/app/home1" style=" border-radius:50px; height:60px; width:245px; height:3px;  border-color: #2AD17D; color:#2AD17D;">Login</a>
+
+<br>
+Dont have an account?<a href="#/register" style="  color:#101010;"><br>Sign up now!</a>
+</center>
+</div>
+  </div>
+
+</div>
+</div>
+  </ion-content>
+</ion-view>
